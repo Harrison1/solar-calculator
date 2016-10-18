@@ -2,6 +2,10 @@ $( document ).ready(function() {
 
 	$( '#answers' ).hide();
 
+	$.getJSON( "../data/data.json", function( json ) {
+  		console.log( "JSON Data: " + json.state );
+ 	});
+
 	$( '#calculate' ).click(function() {
     	console.log( $("#choose_state").val());
     	console.log( $("#monthly_bill").val());
@@ -9,7 +13,7 @@ $( document ).ready(function() {
     	console.log( $("#square_footage").val());
     	// $('#modal1').openModal();
 
-    	$( '#sun_icon' ).addClass('fadeOutUp');
+    	$( '#sun_img' ).addClass('fadeOutUp');
 
     	$( '#answers' ).removeClass('fadeOutDown');
 
@@ -19,8 +23,8 @@ $( document ).ready(function() {
     });
 
     $( '#reset' ).click(function() {
-    	$( '#sun_icon' ).removeClass('fadeOutUp');
-    	$( '#sun_icon' ).addClass('fadeInDown');
+    	$( '#sun_img' ).removeClass('fadeOutUp');
+    	$( '#sun_img' ).addClass('fadeInDown');
 
     	$( '#answers' ).removeClass('fadeInUp');
     	$( '#answers' ).addClass('fadeOutDown');
