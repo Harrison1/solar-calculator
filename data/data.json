@@ -1,0 +1,257 @@
+[
+  {
+    "state": "AL",
+    "sunlight": 2641,
+    "kilowatthour": 12.08
+  },
+  {
+    "state": "AK",
+    "sunlight": 2061,
+    "kilowatthour": 21.42
+  },
+  {
+    "state": "AZ",
+    "sunlight": 3806,
+    "kilowatthour": 12.7
+  },
+  {
+    "state": "AR",
+    "sunlight": 2771,
+    "kilowatthour": 10.28
+  },
+  {
+    "state": "CA",
+    "sunlight": 3055,
+    "kilowatthour": 18.49
+  },
+  {
+    "state": "CO",
+    "sunlight": 3204,
+    "kilowatthour": 12.43
+  },
+  {
+    "state": "CT",
+    "sunlight": 2585,
+    "kilowatthour": 19.78
+  },
+  {
+    "state": "DE",
+    "sunlight": 2594,
+    "kilowatthour": 12.99
+  },
+  {
+    "state": "DC",
+    "sunlight": 2594,
+    "kilowatthour": 12.3
+  },
+  {
+    "state": "FL",
+    "sunlight": 2927,
+    "kilowatthour": 11.18
+  },
+  {
+    "state": "GA",
+    "sunlight": 2986,
+    "kilowatthour": 12.29
+  },
+  {
+    "state": "HI",
+    "sunlight": 2584,
+    "kilowatthour": 28.04
+  },
+  {
+    "state": "ID",
+    "sunlight": 2993,
+    "kilowatthour": 10.81
+  },
+  {
+    "state": "IL",
+    "sunlight": 2567,
+    "kilowatthour": 12.06
+  },
+  {
+    "state": "IN",
+    "sunlight": 2440,
+    "kilowatthour": 11.27
+  },
+  {
+    "state": "IA",
+    "sunlight": 2691,
+    "kilowatthour": 14.07
+  },
+  {
+    "state": "KS",
+    "sunlight": 2922,
+    "kilowatthour": 13.06
+  },
+  {
+    "state": "KY",
+    "sunlight": 2514,
+    "kilowatthour": 10.28
+  },
+  {
+    "state": "LA",
+    "sunlight": 2649,
+    "kilowatthour": 9.06
+  },
+  {
+    "state": "MN",
+    "sunlight": 2513,
+    "kilowatthour": 15.87
+  },
+  {
+    "state": "MD",
+    "sunlight": 2582,
+    "kilowatthour": 14.05
+  },
+  {
+    "state": "MA",
+    "sunlight": 2634,
+    "kilowatthour": 18.19
+  },
+  {
+    "state": "MI",
+    "sunlight": 2392,
+    "kilowatthour": 15.39
+  },
+  {
+    "state": "MN",
+    "sunlight": 2711,
+    "kilowatthour": 13.2
+  },
+  {
+    "state": "MS",
+    "sunlight": 2720,
+    "kilowatthour": 10.21
+  },
+  {
+    "state": "MO",
+    "sunlight": 2690,
+    "kilowatthour": 12.28
+  },
+  {
+    "state": "MT",
+    "sunlight": 2698,
+    "kilowatthour": 11.6
+  },
+  {
+    "state": "NB",
+    "sunlight": 2762,
+    "kilowatthour": 12.11
+  },
+  {
+    "state": "NV",
+    "sunlight": 3646,
+    "kilowatthour": 10.72
+  },
+  {
+    "state": "NH",
+    "sunlight": 2519,
+    "kilowatthour": 18
+  },
+  {
+    "state": "NJ",
+    "sunlight": 2499,
+    "kilowatthour": 16.15
+  },
+  {
+    "state": "NM",
+    "sunlight": 3415,
+    "kilowatthour": 12.51
+  },
+  {
+    "state": "NY",
+    "sunlight": 2120,
+    "kilowatthour": 17.95
+  },
+  {
+    "state": "NC",
+    "sunlight": 2651,
+    "kilowatthour": 11.19
+  },
+  {
+    "state": "ND",
+    "sunlight": 2738,
+    "kilowatthour": 11.26
+  },
+  {
+    "state": "OH",
+    "sunlight": 2183,
+    "kilowatthour": 12.25
+  },
+  {
+    "state": "OK",
+    "sunlight": 3089,
+    "kilowatthour": 9.99
+  },
+  {
+    "state": "OR",
+    "sunlight": 2341,
+    "kilowatthour": 10.79
+  },
+  {
+    "state": "PA",
+    "sunlight": 2614,
+    "kilowatthour": 13.76
+  },
+  {
+    "state": "RI",
+    "sunlight": 2606,
+    "kilowatthour": 17.11
+  },
+  {
+    "state": "SC",
+    "sunlight": 2826,
+    "kilowatthour": 12.58
+  },
+  {
+    "state": "SD",
+    "sunlight": 2947,
+    "kilowatthour": 12.19
+  },
+  {
+    "state": "TN",
+    "sunlight": 2510,
+    "kilowatthour": 10.45
+  },
+  {
+    "state": "TX",
+    "sunlight": 2850,
+    "kilowatthour": 10.86
+  },
+  {
+    "state": "UT",
+    "sunlight": 3029,
+    "kilowatthour": 11.72
+  },
+  {
+    "state": "VT",
+    "sunlight": 2295,
+    "kilowatthour": 17.29
+  },
+  {
+    "state": "VA",
+    "sunlight": 2829,
+    "kilowatthour": 11.71
+  },
+  {
+    "state": "WA",
+    "sunlight": 2170,
+    "kilowatthour": 9.6
+  },
+  {
+    "state": "WV",
+    "sunlight": 2594,
+    "kilowatthour": 11.19
+  },
+  {
+    "state": "WI",
+    "sunlight": 2428,
+    "kilowatthour": 14.55
+  },
+  {
+    "state": "WY",
+    "sunlight": 3073,
+    "kilowatthour": 11.88
+  }
+]
