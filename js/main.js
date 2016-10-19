@@ -104,6 +104,11 @@ $( document ).ready(function() {
     	$( '#answers' ).removeClass('fadeInUp');
     	$( '#answers' ).addClass('fadeOutDown');
 
+    	state = $('#choose_state').val('');
+		bill = $('#monthly_bill').val('');
+		usage = $('#monthly_usage').val('');
+		footage = $('#square_footage').val('');
+
     });
 
     function dcSystemFormula(kwh, sun) {	
