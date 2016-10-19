@@ -34,3 +34,7 @@
  #sun_img {
    width: 100%;
  }
+
+ .error-toast {
+   background-color: rgba(183, 28, 28, 0.7);
+ }

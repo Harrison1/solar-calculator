@@ -46,58 +46,61 @@ $( document ).ready(function() {
 	 });
 
 	$( '#calculate' ).click(function() {
-		state = $('#choose_state').val();
-		bill = parseFloat($('#monthly_bill').val()).toFixed(2);
-		usage = parseFloat($('#monthly_usage').val()).toFixed(2);
-		footage = parseFloat($('#square_footage').val()).toFixed(2);
 
-		var jsonvalues = $.grep(data, function(n, i) {
-    		return (n['state'] == state);
-    	});
+			state = $('#choose_state').val();
+			bill = parseFloat($('#monthly_bill').val()).toFixed(2);
+			usage = parseFloat($('#monthly_usage').val()).toFixed(2);
+			footage = parseFloat($('#square_footage').val()).toFixed(2);
 
-    	var myvalues = jsonvalues;
+		if(state != null && bill != null && usage != null && footage != null) {
+			var jsonvalues = $.grep(data, function(n, i) {
+	    		return (n['state'] == state);
+	    	});
 
-    	mystate = myvalues[0].state;
-    	mysun = myvalues[0].sunlight;
-    	mykilo = myvalues[0].kilowatthour;
+	    	var myvalues = jsonvalues;
 
-    	console.log(state);
-    	console.log(bill);
-    	console.log(usage);
-    	console.log(footage);
+	    	mystate = myvalues[0].state;
+	    	mysun = myvalues[0].sunlight;
+	    	mykilo = myvalues[0].kilowatthour;
 
-    	console.log(mystate);
-    	console.log(mysun);
-    	console.log(mykilo);
+	    	console.log(state);
+	    	console.log(bill);
+	    	console.log(usage);
+	    	console.log(footage);
 
-    	// console.log(dcSystemFormula(usage, mysun));
+	    	console.log(mystate);
+	    	console.log(mysun);
+	    	console.log(mykilo);
 
-    	var kilon = dcSystemFormula(usage, mysun);
+	    	// console.log(dcSystemFormula(usage, mysun));
 
-    	var savings = savingsFormula(kilon, mysun, mykilo);
+	    	var kilon = dcSystemFormula(usage, mysun);
 
-    	var panels = coverHome(footage);
+	    	var savings = savingsFormula(kilon, mysun, mykilo);
 
-    	var produce = producekw(panels);
+	    	var panels = coverHome(footage);
 
-    	$( '#answerA' ).html(kilon);
-    	$( '#answerB' ).html(savings);
-    	$( '#answerC' ).html(panels);
-    	$( '#answerD' ).html(produce);
+	    	var produce = producekw(panels);
 
+	    	$( '#answerA' ).html(kilon);
+	    	$( '#answerB' ).html(savings);
+	    	$( '#answerC' ).html(panels);
+	    	$( '#answerD' ).html(produce);
 
-    	// $('#modal1').openModal();
+	    	$( '#sun_img' ).addClass('fadeOutUp');
 
-    	$( '#sun_img' ).addClass('fadeOutUp');
+	    	$( '#answers' ).removeClass('fadeOutDown');
 
-    	$( '#answers' ).removeClass('fadeOutDown');
-
-    	$( '#answers' ).addClass('fadeInUp');
-    	$( '#answers' ).show();
+	    	$( '#answers' ).addClass('fadeInUp');
+	    	$( '#answers' ).show();
+	    } else {
+	    	Materialize.toast('Oops, it looks like you left a field blank.<br>Make Sure to fill in all the fields before pushing submit', 5000, 'error-toast')
+	    }
 
     });
 
     $( '#reset' ).click(function() {
+
     	$( '#sun_img' ).removeClass('fadeOutUp');
     	$( '#sun_img' ).addClass('fadeInDown');
 
