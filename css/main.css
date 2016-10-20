@@ -36,5 +36,28 @@
  }
 
  .error-toast {
-   background-color: rgba(183, 28, 28, 0.7);
+   background-color: #bd362f;
+   width: 320px;
+   padding-top: 0;
+   padding-bottom: 0;
  }
+
+ .error-icon {
+    margin-right: 10px;
+    font-size: 40px;
+ }
+
+ #toast-container {
+  top: auto !important;
+  right: auto !important;
+  bottom: 10%;
+  left:2%;
+}
+
+.side-nav {
+    width: 400px;
+}
+
+main {
+   padding-left: 400px;
+}

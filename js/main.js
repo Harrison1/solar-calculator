@@ -14,33 +14,6 @@ $( document ).ready(function() {
 	var file_name = './data/data.json';
 
 
-	// var data = function() {
-	//     var t = null;
-	//     return $.ajax({
-	//         async: !1,
-	//         global: !1,
-	//         url: file_name,
-	//         dataType: "json",
-	//         success: function(e) {
-	//             t = e
-	//         }
-	//     }), t
-	// }();
-
-	// var data = $.getJSON( file_name, function() {
-	//   	console.log( "success" );
-	//   })
-	//   .done(function() {
-	//     console.log( "second success" );
-	//   })
-	//   .fail(function() {
-	//     console.log( "error" );
-	//   })
-	//   .always(function() {
-	//     console.log( "complete" );
-	//   });
-
-
 	$.getJSON( file_name, function( json ) {
 	  	data = json;
 	 });
@@ -94,7 +67,7 @@ $( document ).ready(function() {
 	    	$( '#answers' ).addClass('fadeInUp');
 	    	$( '#answers' ).show();
 	    } else {
-	    	Materialize.toast('Oops, it looks like you left a field blank.<br>Make Sure to fill in all the fields before pushing submit', 5000, 'error-toast')
+	    	Materialize.toast('<i class="material-icons prefix error-icon">error</i><p><b>Oops, a field is blank</b><br>Make Sure to fill in all the fields<br>before pushing <b>calculate</b></p>', 5000, 'error-toast')
 	    }
 
     });
@@ -107,7 +80,6 @@ $( document ).ready(function() {
     	$( '#answers' ).removeClass('fadeInUp');
     	$( '#answers' ).addClass('fadeOutDown');
 
-    	state = $('#choose_state').val('');
 		bill = $('#monthly_bill').val('');
 		usage = $('#monthly_usage').val('');
 		footage = $('#square_footage').val('');
