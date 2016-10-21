@@ -21,32 +21,25 @@ $( document ).ready(function() {
 	$( '#calculate' ).click(function() {
 
 		state = $('#choose_state').val();
-		bill = parseFloat($('#monthly_bill').val()).toFixed(2);
-		usage = parseFloat($('#monthly_usage').val()).toFixed(2);
-		footage = parseFloat($('#square_footage').val()).toFixed(2);
+		bill = $('#monthly_bill').val();
+		usage = $('#monthly_usage').val();
+		footage = $('#square_footage').val();
 
-		if( (state != null && state != "") && (bill != null && bill != "") && (usage != null && usage != "") && (footage != null && footage != "") ) {
+		if( state != null && state != "" && bill != null && bill != "" && usage != null && usage != "" && footage != null && footage != "" ) {
 
-			console.log()
-			
 			var jsonvalues = $.grep(data, function(n, i) {
 	    		return (n['state'] == state);
 	    	});
 
 	    	var myvalues = jsonvalues;
 
+	    	bill = parseFloat(bill).toFixed(2);
+			usage = parseFloat(usage).toFixed(2);
+			footage = parseFloat(footage).toFixed(2);
+
 	    	mystate = myvalues[0].state;
 	    	mysun = myvalues[0].sunlight;
 	    	mykilo = myvalues[0].kilowatthour;
-
-	    	console.log(state);
-	    	console.log(bill);
-	    	console.log(usage);
-	    	console.log(footage);
-
-	    	console.log(mystate);
-	    	console.log(mysun);
-	    	console.log(mykilo);
 
 	    	var kilon = dcSystemFormula(usage, mysun);
 
