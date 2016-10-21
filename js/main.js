@@ -20,12 +20,15 @@ $( document ).ready(function() {
 
 	$( '#calculate' ).click(function() {
 
-			state = $('#choose_state').val();
-			bill = parseFloat($('#monthly_bill').val()).toFixed(2);
-			usage = parseFloat($('#monthly_usage').val()).toFixed(2);
-			footage = parseFloat($('#square_footage').val()).toFixed(2);
+		state = $('#choose_state').val();
+		bill = parseFloat($('#monthly_bill').val()).toFixed(2);
+		usage = parseFloat($('#monthly_usage').val()).toFixed(2);
+		footage = parseFloat($('#square_footage').val()).toFixed(2);
 
-		if(state != null && bill != null && usage != null && footage != null) {
+		if( (state != null && state != "") && (bill != null && bill != "") && (usage != null && usage != "") && (footage != null && footage != "") ) {
+
+			console.log()
+			
 			var jsonvalues = $.grep(data, function(n, i) {
 	    		return (n['state'] == state);
 	    	});
@@ -45,8 +48,6 @@ $( document ).ready(function() {
 	    	console.log(mysun);
 	    	console.log(mykilo);
 
-	    	// console.log(dcSystemFormula(usage, mysun));
-
 	    	var kilon = dcSystemFormula(usage, mysun);
 
 	    	var savings = savingsFormula(kilon, mysun, mykilo);
@@ -60,12 +61,11 @@ $( document ).ready(function() {
 	    	$( '#answerC' ).html(panels);
 	    	$( '#answerD' ).html(produce);
 
-	    	$( '#sun_img' ).addClass('fadeOutUp');
+	    	if($( '#sun_img' ).is( ':visible' )) {
+	    		$( '#sun_img' ).toggle('slow');
+	    		$( '#answers' ).toggle('slow');
+	    	}
 
-	    	$( '#answers' ).removeClass('fadeOutDown');
-
-	    	$( '#answers' ).addClass('fadeInUp');
-	    	$( '#answers' ).show();
 	    } else {
 	    	Materialize.toast('<i class="material-icons prefix error-icon">error</i><p><b>Oops, a field is blank</b><br>Make Sure to fill in all the fields<br>before pushing <b>calculate</b></p>', 5000, 'error-toast')
 	    }
@@ -74,15 +74,18 @@ $( document ).ready(function() {
 
     $( '#reset' ).click(function() {
 
-    	$( '#sun_img' ).removeClass('fadeOutUp');
-    	$( '#sun_img' ).addClass('fadeInDown');
+    	if($( '#answers' ).is( ':visible' )) {
+    		$( '#sun_img' ).toggle('slow');
+    		$( '#answers' ).toggle('slow');
+    	}
 
-    	$( '#answers' ).removeClass('fadeInUp');
-    	$( '#answers' ).addClass('fadeOutDown');
+		$('#monthly_bill').val('');
+		$('#monthly_usage').val('');
+		$('#square_footage').val('');
 
-		bill = $('#monthly_bill').val('');
-		usage = $('#monthly_usage').val('');
-		footage = $('#square_footage').val('');
+		bill = null;
+		usage = null;
+		footage = null;
 
     });
 

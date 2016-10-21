@@ -26,28 +26,32 @@
    color: #FF9800;
  }*/
 
- .sun {
+#answers {
+   display: none; 
+}
+
+.sun {
  	color: #FFC107;
     font-size: 40em;
  }
 
- #sun_img {
+#sun_img {
    width: 100%;
  }
 
- .error-toast {
+.error-toast {
    background-color: #bd362f;
    width: 330px;
    padding-top: 0;
    padding-bottom: 0;
  }
 
- .error-icon {
+.error-icon {
     margin-right: 10px;
     font-size: 40px;
  }
 
- #toast-container {
+#toast-container {
   top: auto !important;
   right: auto !important;
   bottom: 10%;
