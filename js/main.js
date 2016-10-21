@@ -50,8 +50,14 @@ $( document ).ready(function() {
 	    	var produce = producekw(panels);
 
 	    	$( '#answerA' ).html(kilon);
+	    	$( '#answerA-2' ).html(kilon);
+
 	    	$( '#answerB' ).html(savings);
+	    	$( '#answerB-2' ).html(savings);
+
 	    	$( '#answerC' ).html(panels);
+	    	$( '#answerC-2' ).html(panels);
+
 	    	$( '#answerD' ).html(produce);
 
 	    	if($( '#sun_img' ).is( ':visible' )) {
