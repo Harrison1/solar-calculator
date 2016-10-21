@@ -89,20 +89,20 @@
 
                     <div class="input-field col s12 m6 l12">
                         <i class="material-icons prefix">attach_money</i>
-                        <input id="monthly_bill" type="number" step="any" class="validate">
-                        <label for="monthly_bill">Average Montly Bill (USD)</label>
+                        <input id="monthly_bill" type="number" step="0.01" class="validate">
+                        <label for="monthly_bill" data-error="please enter a valid amount">Average Montly Bill (USD)</label>
                     </div>
 
                     <div class="input-field col s12 m6 l12">
                         <i class="material-icons prefix">lightbulb_outline</i>
                         <input id="monthly_usage" type="number" step="any" class="validate">
-                        <label for="monthly_usage">Average Monthly Usage (kWh)</label>
+                        <label for="monthly_usage" data-error="please enter a valid number">Average Monthly Usage (kWh)</label>
                     </div>
 
                     <div class="input-field col s12 m6 l12">
                         <i class="material-icons prefix">home</i>
                         <input id="square_footage" type="number" step="any" class="validate">
-                        <label for="square_footage">House or Lot Size (Sq. Ft.)</label>
+                        <label for="square_footage" data-error="please enter a valid number">House or Lot Size (Sq. Ft.)</label>
                     </div>
 
                     <div class="clearfix">

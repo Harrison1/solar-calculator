@@ -16,10 +16,10 @@
 }
 
 /* invalid color */
-.input-field input[type=number].invalid {
+/*.input-field input[type=number].invalid {
     border-bottom: 1px solid red;
     box-shadow: 0 1px 0 0 red;
-}
+}*/
 
 /* icon prefix focus color */
 .input-field .prefix.active {
