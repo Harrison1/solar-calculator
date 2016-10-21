@@ -55,10 +55,10 @@ $( document ).ready(function() {
 	    	$( '#answerB' ).html(savings);
 	    	$( '#answerB-2' ).html(savings);
 
-	    	$( '#answerC' ).html(panels);
-	    	$( '#answerC-2' ).html(panels);
+	    	$( '#answerC' ).html(parseFloat(panels).toFixed(0));
+	    	$( '#answerC-2' ).html(parseFloat(panels).toFixed(0));
 
-	    	$( '#answerD' ).html(produce);
+	    	$( '#answerD' ).html(parseFloat(produce).toFixed(0));
 
 	    	if($( '#sun_img' ).is( ':visible' )) {
 	    		$( '#sun_img' ).toggle('slow');
