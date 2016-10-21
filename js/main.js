@@ -49,16 +49,16 @@ $( document ).ready(function() {
 
 	    	var produce = producekw(panels);
 
-	    	$( '#answerA' ).html(kilon);
-	    	$( '#answerA-2' ).html(kilon);
+	    	$( '#answerA' ).html(commaNumber(kilon));
+	    	$( '#answerA-2' ).html(commaNumber(kilon));
 
-	    	$( '#answerB' ).html(savings);
-	    	$( '#answerB-2' ).html(savings);
+	    	$( '#answerB' ).html(commaNumber(savings));
+	    	$( '#answerB-2' ).html(commaNumber(savings));
 
-	    	$( '#answerC' ).html(parseFloat(panels).toFixed(0));
-	    	$( '#answerC-2' ).html(parseFloat(panels).toFixed(0));
+	    	$( '#answerC' ).html(commaNumber(parseFloat(panels).toFixed(0)));
+	    	$( '#answerC-2' ).html(commaNumber(parseFloat(panels).toFixed(0)));
 
-	    	$( '#answerD' ).html(parseFloat(produce).toFixed(0));
+	    	$( '#answerD' ).html(commaNumber(parseFloat(produce).toFixed(0)));
 
 	    	if($( '#sun_img' ).is( ':visible' )) {
 	    		$( '#sun_img' ).toggle('slow');
@@ -90,60 +90,38 @@ $( document ).ready(function() {
 
     function dcSystemFormula(kwh, sun) {	
     	var a = kwh/30;
-    	console.log("a= " + a);
     	var b = a/sun;
-    	console.log("b= " + b);
     	var c = b/0.80;
-    	console.log("c= " + c);
-
     	var d = parseFloat(c).toFixed(2);
-    	console.log("d= " + d);
-
     	return d;
-
     }
 
     function savingsFormula(dc, sun, sk) {
     	var a = dc*sun;
-    	console.log("a = " + a);
-
     	var b = a/12;
-    	console.log("b = " + b);
-
     	var c = b*sk;
-    	console.log("c = " + c);
-
     	var d = parseFloat(c).toFixed(2);
-    	console.log("d= " + d);
-
     	return d;
-
     }
 
     function coverHome(sq) {
     	var a = sq/(1/144);
-    	console.log("sq = " + sq);
-
     	var b = a/17.60;
-    	console.log("b = " + b);
-
     	var c = parseFloat(b).toFixed(2);
-    	console.log("c = " + c);
-
     	return c;
     }
 
     function producekw(tot) {
     	var a = tot*270;
-    	console.log("a = " + a);
-
     	var b = a/1000;
-    	console.log("b = " + b);
-
     	var c =  parseFloat(b).toFixed(2);
-    	console.log("c = " + c);
-
     	return c;
     }
+
+    function commaNumber(num) {
+	    var n= num.toString().split(".");
+	    n[0] = n[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+	    return n.join(".");
+	}
 
 });
