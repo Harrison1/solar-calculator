@@ -28,7 +28,7 @@
 .blue-btn {
     background-color: #2196f3;
 }
-.blue-btn:hover {
+.blue-btn:hover, .blue-btn:focus, .blue-btn:visited  {
     background-color: #2b6fbb;
 }
 .dropdown-content li>a,
@@ -44,6 +44,10 @@
 }
 #sun_img {
     width: 100%;
+    max-width: 300px;
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .error-toast {
     background-color: #bd362f;
