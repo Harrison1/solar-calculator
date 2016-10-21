@@ -55,13 +55,27 @@
   top: auto !important;
   right: auto !important;
   bottom: 10%;
-  left:2%;
+  left: 10%;
 }
 
 .side-nav {
     width: 400px;
 }
 
-main {
-   padding-left: 400px;
+.card-inputs {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.padding20 {
+  padding: 20px;
+}
+
+#answerA, #answerB, #answerC, #answerD {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.font-thin {
+  font-weight: 300;
 }
