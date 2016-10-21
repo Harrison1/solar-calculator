@@ -25,6 +25,12 @@
 .input-field .prefix.active {
     color: #2196f3;
 }
+.blue-btn {
+    background-color: #2196f3;
+}
+.blue-btn:hover {
+    background-color: #2b6fbb;
+}
 .dropdown-content li>a,
 .dropdown-content li>span {
     color: #2196f3;
@@ -68,7 +74,7 @@
 #answerA,
 #answerB,
 #answerC {
-    font-size: 40px;
+    font-size: 34px;
     font-weight: 700;
     color: #2196f3;
 }
