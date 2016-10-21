@@ -66,7 +66,7 @@ $( document ).ready(function() {
 	    	}
 
 	    } else {
-	    	Materialize.toast('<i class="material-icons prefix error-icon">error</i><p><b>Oops, a field is blank</b><br>Make Sure to fill in all the fields<br>before pushing <b>calculate</b></p>', 5000, 'error-toast')
+	    	Materialize.toast('<i class="material-icons prefix error-icon">error</i><p><b>Oops, there was an error</b><br>Make sure to fill in all the fields<br>before pushing <b>calculate</b></p>', 5000, 'error-toast')
 	    }
 
     });
