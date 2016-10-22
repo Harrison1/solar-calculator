@@ -1,5 +1,5 @@
 # solar-calculator
-fractl solar panel calculator
+fractl: solar panel calculator
 
 [demo](https://harrison1.github.io/solar-calculator/)
 
